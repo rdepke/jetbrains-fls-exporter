@@ -11,7 +11,7 @@ async fn main() {
 }
 
 async fn run() {
-    Logger::with_env_or_str("info").start().unwrap();
+    Logger::try_with_env_or_str("info").unwrap().start().unwrap();
     let bind_addr = env::var("JLS_EXPORTER_BINDADDR")
         .unwrap_or("0.0.0.0:9836".to_string())
         .to_socket_addrs()
