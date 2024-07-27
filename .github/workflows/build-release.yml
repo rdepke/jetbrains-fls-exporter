@@ -37,11 +37,11 @@ jobs:
         if: startsWith(matrix.os, 'ubuntu')
 
       - name: cargo build
-        uses: actions-rs/cargo@v1
+        uses: houseabsolute/actions-rust-cross@v0
         with:
           command: build
-          args: --release --locked --target=${{ matrix.target }} ${{ matrix.cargo_flags }}
-          use-cross: ${{ matrix.cross }}
+          args: --release --locked
+          target: ${{ matrix.target }}
 
       - name: Compress binaries
         uses: svenstaro/upx-action@v2
