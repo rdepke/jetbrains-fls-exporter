@@ -1,4 +1,4 @@
-FROM docker.io/rust:1.80 as builder
+FROM docker.io/rust:1.87 as builder
 WORKDIR /usr/src/jetbrains-fls-exporter
 COPY Cargo.toml .
 COPY Cargo.lock .
