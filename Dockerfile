@@ -1,4 +1,4 @@
-FROM docker.io/rust:1.90-trixie as builder
+FROM docker.io/rust:1.91-trixie as builder
 WORKDIR /usr/src/jetbrains-fls-exporter
 COPY Cargo.toml .
 COPY Cargo.lock .
